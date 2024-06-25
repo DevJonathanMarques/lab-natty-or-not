@@ -1,51 +1,48 @@
-# Natural ou Fake Natty? Como Vencer na Era das IAs Generativas
-
-## 🚀 Introdução
-
-> Woooow! Look at this 👀
-
-Olá pessoal, Venilton da DIO aqui! Inspirado na hype _"Natty or Not"_ do fisiculturismo, este Lab da DIO te convida a conhecer o mundo das IAs Generativas, explorando o potencial dessas tendências tecnológicas incríveis!
-
-## 🎯 Bora Pro Desafio!? Você Já Venceu 💪🤓
-
-### Objetivos
-
-1. **Explorar IAs Generativas**: Utilize essas tecnologias para criar conteúdos que sejam o mais realista possível. Seja criativo! Você pode produzir imagens, textos, áudios, vídeos ou combinações de tudo isso!
-1. **Potfólio de Projetos**:
-    1. Faça o "fork" deste repositório, criando uma cópia em seu GitHub pessoal;
-    2. Edite seu README com os detalhes do seu projeto, siga nosso [Template](#template) (é só copiar, colar e preencher);
-    3. Submeta o link do seu repositório na plataforma da DIO. Pronto, você acabou de fortalecer seu portfólio de projetos nos perfis do GitHub e DIO 🚀
-1. **Efeito de Rede**: Compartilhe seus resultados nas redes sociais com a hashtag **#LabDIONattyOrNot**. Não esqueça de nos marcar: [DIO](https://www.linkedin.com/school/dio-makethechange) e [falvojr](https://www.linkedin.com/in/falvojr).
-
-### Template
-
-```markdown
-# Título do Projeto Extremamente Aesthetic ;)
+# PROJETO IA DIO - NATTY OR NOT?
 
 ## 📒 Descrição
-Breve descrição do seu projeto
+O projeto consiste em criar um conteúdo utilizando inteligência artificial, portanto, eu criei com o ChatGPT um ChatBot, onde você pode ter um diálogo simples com ele.
 
 ## 🤖 Tecnologias Utilizadas
-Liste as IAs Generativas e outras ferramentas usadas
+ChatGPT
 
 ## 🧐 Processo de Criação
-Descreva como você criou o conteúdo
+Pensei em utilizar a inteligência artificial para criar algo relacionado a inteligência artificial, até que veio a ideia do ChatBot. No ChaGPT, pedi que ele criasse um ChatBot simples para mim. A primeira versão não ficou muito boa, pois a mensagem que o usuário digitou não faria diferença, já que a resposta seria aleatória. Então, eu pedi que ele criasse um ChatBot em que fosse possível ter um diálogo simples.
 
 ## 🚀 Resultados
-Apresente os resultados do seu projeto
+O código abaixo foi o resultado dos meus prompts do ChatGPT, caso você queria testar, é só rodá-lo no terminal e dialogar com as mensagens: **Oi**, **Como você está?**, **Qual é o seu nome?**, **Adeus**, **Sair**.
 
-## 💭 Reflexão (Opcional)
-Comente sobre o desafio de criar algo 'natty' com IA.
+```python
+import random
+
+# Dicionário de padrões e respostas
+padroes_respostas = {
+    "oi": ["Olá!", "Oi!", "E aí!"],
+    "como você está?": ["Estou bem, obrigado por perguntar!", "Estou ótimo! E você?", "Estou bem, e você?"],
+    "qual é o seu nome?": ["Meu nome é ChatBot.", "Você pode me chamar de ChatBot.", "Sou o ChatBot!"],
+    "adeus": ["Até mais!", "Tchau!", "Até a próxima!"],
+    "sair": ["Até mais!", "Tchau!", "Foi bom conversar com você!"],
+}
+
+# Função para responder às perguntas do usuário
+def responder(pergunta):
+    for padrao, respostas in padroes_respostas.items():
+        if padrao in pergunta:
+            return random.choice(respostas)
+    return "Desculpe, não entendi o que você disse."
+
+# Função principal que lê as perguntas do usuário e responde
+def main():
+    print("Bem-vindo ao ChatBot! (Digite 'sair' para sair)")
+    while True:
+        pergunta = input("Você: ").strip().lower()
+        if pergunta == "sair":
+            print("Até mais!")
+            break
+        resposta = responder(pergunta)
+        print("ChatBot:", resposta)
+
+# Executar o chatbot
+if __name__ == "__main__":
+    main()
 ```
-
-### Exemplos e Insigths
-
-- [E-BOOK](/exemplos/E-BOOK.md)
-- [Podcast](/exemplos/PODCAST.md)
-- [Vídeo (Avatar Virtual)](/exemplos/VIDEO.md)
-
-## Links Interessantes
-
-[Base10: If You’re Not First, You’re Last: How AI Becomes Mission Critical](https://base10.vc/post/generative-ai-mission-critical/)
-
-![Base10's Trend Map Generative AI](https://github.com/digitalinnovationone/lab-natty-or-not/assets/730492/f4df26e8-f8f7-4419-8252-c69d73ea930c)
